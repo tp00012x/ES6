@@ -34,7 +34,6 @@ console.log(mark.lastName);
 
 /////////////////////////////
 // Lecture: Object.create
-/*
 var personProto = {
     calculateAge: function() {
         console.log(2016 - this.yearOfBirth);
@@ -51,13 +50,10 @@ var jane = Object.create(personProto, {
     yearOfBirth: { value: 1969 },
     job: { value: 'designer' }
 });
-*/
-
 
 
 /////////////////////////////
 // Lecture: Primitives vs objects
-/*
 // Primitives
 var a = 23;
 var b = a;
@@ -93,13 +89,11 @@ change(age, obj);
 
 console.log(age);
 console.log(obj.city);
-*/
 
 
 
 /////////////////////////////
 // Lecture: Passing functions as arguments
-/*
 var years = [1990, 1965, 1937, 2005, 1998];
 
 function arrayCalc(arr, fn) {
@@ -133,13 +127,11 @@ var rates = arrayCalc(ages, maxHeartRate);
 
 console.log(ages);
 console.log(rates);
-*/
 
 
 
 /////////////////////////////
 // Lecture: Functions returning functions
-/*
 function interviewQuestion(job) {
     if (job === 'designer') {
         return function(name) {
@@ -167,13 +159,11 @@ designerQuestion('Mark');
 designerQuestion('Mike');
 
 interviewQuestion('teacher')('Mark');
-*/
 
 
 
 /////////////////////////////
 // Lecture: IIFE
-/*
 function game() {
     var score = Math.random() * 10;
     console.log(score >= 5);
@@ -193,13 +183,11 @@ game();
     var score = Math.random() * 10;
     console.log(score >= 5 - goodLuck);
 })(5);
-*/
 
 
 
 /////////////////////////////
 // Lecture: Closures
-/*
 function retirement(retirementAge) {
     var a = ' years left until retirement.';
     return function(yearOfBirth) {
@@ -232,13 +220,11 @@ function interviewQuestion(job) {
 }
 
 interviewQuestion('teacher')('John');
-*/
 
 
 
 /////////////////////////////
 // Lecture: Bind, call and apply
-/*
 var john = {
     name: 'John',
     age: 26,
@@ -296,38 +282,31 @@ var ages = arrayCalc(years, calculateAge);
 var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
 console.log(ages);
 console.log(fullJapan);
-*/
-
-
 
 
 /////////////////////////////
 // CODING CHALLENGE
 
 
-/*
---- Let's build a fun quiz game in the console! ---
-
-1. Build a function constructor called Question to describe a question. A question should include:
-a) question itself
-b) the answers from which the player can choose the correct one (choose an adequate data structure here, array, object, etc.)
-c) correct answer (I would use a number for this)
-
-2. Create a couple of questions using the constructor
-
-3. Store them all inside an array
-
-4. Select one random question and log it on the console, together with the possible answers (each question should have a number) (Hint: write a method for the Question objects for this task).
-
-5. Use the 'prompt' function to ask the user for the correct answer. The user should input the number of the correct answer such as you displayed it on Task 4.
-
-6. Check if the answer is correct and print to the console whether the answer is correct ot nor (Hint: write another method for this).
-
-7. Suppose this code would be a plugin for other programmers to use in their code. So make sure that all your code is private and doesn't interfere with the other programmers code (Hint: we learned a special technique to do exactly that).
-*/
-
-
-/*
+// --- Let's build a fun quiz game in the console! ---
+//
+// 1. Build a function constructor called Question to describe a question. A question should include:
+// a) question itself
+// b) the answers from which the player can choose the correct one (choose an adequate data structure here, array, object, etc.)
+// c) correct answer (I would use a number for this)
+//
+// 2. Create a couple of questions using the constructor
+//
+// 3. Store them all inside an array
+//
+// 4. Select one random question and log it on the console, together with the possible answers (each question should have a number) (Hint: write a method for the Question objects for this task).
+//
+// 5. Use the 'prompt' function to ask the user for the correct answer. The user should input the number of the correct answer such as you displayed it on Task 4.
+//
+// 6. Check if the answer is correct and print to the console whether the answer is correct ot nor (Hint: write another method for this).
+//
+// 7. Suppose this code would be a plugin for other programmers to use in their code. So make sure that all your code is private and doesn't interfere with the other programmers code (Hint: we learned a special technique to do exactly that).
+//
 (function() {
     function Question(question, answers, correct) {
         this.question = question;
@@ -374,7 +353,6 @@ c) correct answer (I would use a number for this)
 
     questions[n].checkAnswer(answer);
 })();
-*/
 
 
 
@@ -391,7 +369,6 @@ c) correct answer (I would use a number for this)
 */
 
 
-/*
 (function() {
     function Question(question, answers, correct) {
         this.question = question;
@@ -470,4 +447,3 @@ c) correct answer (I would use a number for this)
     nextQuestion();
     
 })();
-*/
